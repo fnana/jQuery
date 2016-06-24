@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>bind demo</title>
+  <style>
+  p {
+    background: yellow;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+  }
+  p.over {
+     background: #ccc;
+  }
+  span {
+    color: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ <input id="input" type="text">
+<p>Click or double click here.</p>
+<span></span>
+ 
+<script>
+var input = $('input');
+
+input.bind('focus', OnFocus);
+
+function a() {
+  console.log(0);
+}
+
+
+function OnFocus(evt) {
+  
+  input.trigger( "customEvent", [ 01, a ] );
+}
+
+
+input.on('customEvent', onCustomeEvent);
+
+function onCustomeEvent (evt, param1, param2) {
+  console.log(param1);
+  console.log(param2);
+}
+
+
+/*
+input.bind('keyup', OnKeyup);
+input.bind('keydown', OnKeydown);
+
+function OnFocus(e) {
+  console.log(e.type);
+}
+function OnKeyup(e) {
+  console.log(e.type);
+}
+function OnKeydown(e) {
+  console.log(e.type);
+}
+var element = $('p');
+element.bind('click', onClick);
+element.bind('mouseover', onHover);
+//element.on('click', onClick);
+
+//element.click(onClick);
+
+function onClick (event) {
+  console.log(event.type);
+}
+
+function onHover (event) {
+  console.log(event.type);
+}
+
+element.unbind();
+//element.off();
+
+
+//window.addEventListener('load', onReady); //js basic
+
+$( document ).on('ready', onReady);
+
+function onReady(event) {
+
+  console.log(event.type);
+}
+*/
+
+//$( "#foo" ).on( "custom", function( event, param1, param2 ) {
+//  alert( param1 + "\n" + param2 );
+//});
+
+
+
+
+</script>
+ 
+</body>
+</html>

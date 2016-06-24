@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>bind demo</title>
+  
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+  <div id="container">
+    Label:
+    <input id="input" type="text">
+  </div>
+<script>
+
+function div() {
+  var nodeName;
+  var nodeType;
+}
+
+var input = $('#input');
+
+//clone
+//var newInput = input.clone();
+//$('body').append(newInput);
+
+var container = $('#container');
+container.text('Cuong Khin');
+
+container.empty(); // === container.html('');
+
+//container.remove();
+
+
+container.animate({
+  marginLeft: -100
+}, 3000, completeFunction);
+
+function completeFunction() {
+  alert(0);
+};
+
+
+
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+      .myClass1 {
+        color: red;
+        padding: 2px;
+      }
+
+      .myClass2 {
+        color: blue;
+      }
+
+      .myClass3 {
+        color: green;
+      }
+
+
+    </style>
+
+
+
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+
+  <p id="txt" class="myClass1 myClass2" data-url="www.google.com">Hello world</p>
+
+  <script>
+
+    //$('#txt').addClass('myClass1');
+    //$('#txt').addClass('myClass2');
+
+    $('#txt').removeClass('myClass');
+
+    var is = $('#txt').hasClass('myClass');
+    //console.log(is);
+
+    $('#txt').css({
+        fontSize: 24,
+        color: 'green'
+    });
+
+    //console.log($('#txt').css('fontSize'));
+
+    //txt.style.fontSize = 24;
+    //txt.style.color = 'green';
+
+    var th = $('#txt').height();
+    
+    var ih = $('#txt').innerHeight();
+
+    var txt = $('#txt');
+
+    
+    var obj = {
+      name: 'Cuong Khin',
+      age: 32
+    };
+
+    txt.data('person', obj); //attribute data
+    //txt.attr('data-person', obj); //all attribute
+
+    //txt.setAttribute('data-person', obj);
+
+    //var query = txt.data('person');
+
+   // txt.removeData('person');
+
+    var data = txt.data('person');
+    console.log(data);
+
+
+
+
+  </script>
+
+</body>
+
+</html> 

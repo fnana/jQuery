@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>attributeHas demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<script>
+	//CODE class ở đây
+	function ImageWrapper() {
+	
+	}
+	
+	ImageWrapper.prototype.load = function(url) {
+		
+		//tạo image 
+		var img = ??? //dùng jquery or code thường cũng dc 
+		
+		
+		//add sự kiện load cho image:load
+		
+		//hàm xử lý load xong
+		function onLoadHandler(evt) {
+			//trigger event here
+		}
+		
+		//add sự kiện erorr khi không load được image:error
+		
+		function onErrorHandler(evt) {
+			//trigger event here
+		}
+		
+		//bắt đầu load image
+		$(img).attr('src', url);
+	}
+	
+</script>
+
+
+<script>
+	//code dùng class ở đây
+	var iw = new ImageWrapper();
+	iw.load('http://sutrixgroup.com/wp-content/uploads/2016/01/logo.png');
+	
+	//add sự kiện để biết khi nào image được load xong
+	
+	
+	//add function xử lý sự kiện khi image được load và show image ở đây:
+	
+</script>
+ 
+</body>
+</html>
